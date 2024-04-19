@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cspsb3nfjqeh2"]
+
+[ext_resource type="Texture2D" uid="uid://d3nvbg38alu51" path="res://images/room.png" id="1_8vh0t"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Room" type="Sprite2D" parent="."]
+position = Vector2(1, -9.53674e-07)
+scale = Vector2(1.11221, 1.11221)
+texture = ExtResource("1_8vh0t")
+
+[node name="Polygon2D" type="Polygon2D" parent="Room"]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(26.0741, 243.658, 28.7714, 230.172, 94.4063, 217.584, 99.8009, 201.4, 57.5429, 194.207, 49.4509, 183.418, 91.709, 176.225, 130.371, 192.409, 139.362, 162.738, 172.629, 153.747, 192.409, 185.216, 173.528, 220.281, 171.73, 260.741, 152.848, 252.649, 150.151, 227.474, 129.472, 234.667, 104.296, 256.246, 58.442, 277.824, 94.4063, 242.759, 48.5518, 250.851)
