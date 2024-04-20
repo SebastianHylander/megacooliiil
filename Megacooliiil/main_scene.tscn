@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://173cm8pck637"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_ckb3h"]
-[ext_resource type="FontFile" uid="uid://y0cadiju4cdy" path="res://Gabrielle.ttf" id="1_qebin"]
+[ext_resource type="FontFile" uid="uid://b41vro38bvd87" path="res://Gabrielle.ttf" id="1_qebin"]
 [ext_resource type="Script" path="res://Textfield.gd" id="2_1p3x7"]
 [ext_resource type="Script" path="res://Items.gd" id="4_td557"]
 [ext_resource type="Script" path="res://Item.gd" id="5_gpcit"]
@@ -10,7 +10,6 @@
 script = ExtResource("1_ckb3h")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3, -16)
 
 [node name="UILayer" type="CanvasLayer" parent="."]
 
@@ -18,7 +17,7 @@ position = Vector2(3, -16)
 custom_minimum_size = Vector2(0, 100)
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 168.0
+offset_bottom = 158.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
@@ -43,20 +42,11 @@ theme_override_constants/margin_bottom = 10
 [node name="Panel" type="Panel" parent="UILayer/MarginContainer/Panel/MarginContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UILayer/MarginContainer/Panel/MarginContainer/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 27.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Textfield" type="Label" parent="UILayer/MarginContainer/Panel/MarginContainer/Panel"]
 layout_mode = 2
-offset_left = 10.0
+offset_left = 7.0
 offset_top = 6.0
-offset_right = 1095.0
+offset_right = 1875.0
 offset_bottom = 119.0
 theme_override_fonts/font = ExtResource("1_qebin")
 theme_override_font_sizes/font_size = 38
@@ -71,9 +61,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -10.0
+offset_left = -275.0
 offset_top = -100.0
-offset_right = 10.0
+offset_right = 275.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
