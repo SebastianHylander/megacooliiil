@@ -5,6 +5,7 @@
 
 [node name="roomEnd" type="Node2D"]
 script = ExtResource("1_4dutx")
+prev_room = "roomStorage"
 
 [node name="Room" type="Sprite2D" parent="."]
 texture = ExtResource("1_fq2ru")

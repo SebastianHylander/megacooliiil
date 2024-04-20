@@ -17,6 +17,7 @@ var rooms = {
 }
 
 var currentRoom
+var backEnabled = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,6 +35,11 @@ func _process(delta):
 func change_room(to_room):
 	var newRoom = rooms[to_room]
 	remove_child(currentRoom)
+	
+	#Making sure backarrow continues to be visible
+	if backEnabled:
+		currentRoom.exit(self)
+	
 	newRoom.enter(self)
 	add_child(newRoom)
 	currentRoom = newRoom

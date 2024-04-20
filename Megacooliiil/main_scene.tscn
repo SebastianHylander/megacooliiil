@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://173cm8pck637"]
+[gd_scene load_steps=8 format=3 uid="uid://173cm8pck637"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_ckb3h"]
 [ext_resource type="FontFile" uid="uid://y0cadiju4cdy" path="res://Gabrielle.ttf" id="1_qebin"]
 [ext_resource type="Script" path="res://Textfield.gd" id="2_1p3x7"]
 [ext_resource type="Script" path="res://Items.gd" id="4_td557"]
 [ext_resource type="Script" path="res://Item.gd" id="5_gpcit"]
+[ext_resource type="Texture2D" uid="uid://j2ksqg612nct" path="res://images/backArrow.png" id="6_o86a4"]
+[ext_resource type="Script" path="res://BackArrow.gd" id="6_qw6mn"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_ckb3h")
@@ -190,3 +192,19 @@ visibility_layer = 7
 layout_mode = 0
 offset_right = 80.0
 offset_bottom = 80.0
+
+[node name="BackArrow" type="Area2D" parent="UILayer"]
+visible = false
+script = ExtResource("6_qw6mn")
+
+[node name="TextureRect" type="TextureRect" parent="UILayer/BackArrow"]
+offset_left = 1304.0
+offset_top = 1022.0
+offset_right = 1373.0
+offset_bottom = 1061.0
+texture = ExtResource("6_o86a4")
+expand_mode = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UILayer/BackArrow"]
+position = Vector2(1304, 1022)
+polygon = PackedVector2Array(19, 3, 50, 2, 51, 19, 67, 20, 35, 37, 4, 20, 18, 19)

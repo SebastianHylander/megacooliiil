@@ -8,6 +8,7 @@
 
 [node name="roomJail" type="Node2D"]
 script = ExtResource("1_2nt6m")
+prev_room = "roomStart"
 
 [node name="Room" type="Sprite2D" parent="."]
 position = Vector2(0.999939, 0.99997)
