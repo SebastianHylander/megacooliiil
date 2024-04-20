@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cspsb3nfjqeh2"]
 
-[ext_resource type="Texture2D" uid="uid://d3nvbg38alu51" path="res://images/room.png" id="1_8vh0t"]
+[ext_resource type="Texture2D" uid="uid://cva20ckypuhpe" path="res://images/room.png" id="1_8vh0t"]
 [ext_resource type="Script" path="res://bill.gd" id="2_lqa1u"]
 [ext_resource type="Script" path="res://Door.gd" id="3_wu7wb"]
-[ext_resource type="FontFile" uid="uid://b41vro38bvd87" path="res://Gabrielle.ttf" id="4_bjwuh"]
+[ext_resource type="FontFile" uid="uid://y0cadiju4cdy" path="res://Gabrielle.ttf" id="4_bjwuh"]
 [ext_resource type="Script" path="res://Textfield.gd" id="5_tfxqh"]
 
 [node name="Node2D" type="Node2D"]
