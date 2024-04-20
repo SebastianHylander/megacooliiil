@@ -45,3 +45,10 @@ message = "Don't you dare think about it, you are a honest person"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Coins"]
 polygon = PackedVector2Array(318, 56, 350, 63, 354, 124, 359, 147, 333, 151, 334, 138, 318, 131, 308, 137, 291, 127, 302, 117)
+
+[node name="Chandelier" type="Area2D" parent="Room"]
+script = ExtResource("4_mt7pi")
+message = "hmm... nice chandelier"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Chandelier"]
+polygon = PackedVector2Array(83, -164, 87, -194, 83, -217, 46, -222, 23, -283, 19, -340, 29, -357, 41, -335, 47, -286, 59, -256, 81, -251, 76, -271, 58, -288, 59, -331, 64, -349, 72, -331, 72, -299, 81, -291, 82, -323, 107, -335, 118, -294, 125, -285, 138, -293, 141, -332, 149, -349, 157, -335, 157, -291, 148, -268, 130, -266, 130, -255, 154, -256, 166, -283, 168, -325, 173, -341, 183, -322, 185, -267, 179, -240, 152, -217, 129, -221, 121, -205, 150, -170, 132, -154, 102, -152)

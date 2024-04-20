@@ -45,3 +45,24 @@ cell_sound = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Cell2"]
 polygon = PackedVector2Array(481.482, -102, 641.642, -88, 629.63, 294, 471.472, 231)
+
+[node name="Cell1" type="Area2D" parent="Room"]
+script = ExtResource("6_a4hxg")
+message = "Its locked"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Cell1"]
+polygon = PackedVector2Array(-730.731, -33, -605.606, -90, -565.565, 255, -675.676, 331)
+
+[node name="Cell3" type="Area2D" parent="Room"]
+script = ExtResource("6_a4hxg")
+message = "Nameless, accursed undead soul"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Cell3"]
+polygon = PackedVector2Array(766.767, -56, 936.937, -22, 902.903, 483, 724.725, 382)
+
+[node name="Cell4" type="Area2D" parent="Room"]
+script = ExtResource("6_a4hxg")
+message = "*Something in the void stares back*"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Cell4"]
+polygon = PackedVector2Array(-861.862, 450, -742.743, 363, -850.851, -12, -990.991, 53)
