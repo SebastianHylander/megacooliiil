@@ -23,7 +23,7 @@ func _ready():
 	add_child(roomStart)
 	var camera = get_child(0)
 	currentRoom = roomStart
-	currentRoom.enter()
+	currentRoom.enter(self)
 	pass # Replace with function body.
 
 
