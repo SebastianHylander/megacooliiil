@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://do73ff1n8tt0u"]
+[gd_scene load_steps=5 format=3 uid="uid://do73ff1n8tt0u"]
 
 [ext_resource type="Script" path="res://rooms/break_room.gd" id="1_o8eyr"]
-[ext_resource type="Texture2D" uid="uid://bljwcrallm56x" path="res://images/break_room.png" id="2_6aw7p"]
+[ext_resource type="Texture2D" uid="uid://c677tpgefr8yf" path="res://images/break_room.png" id="2_6aw7p"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_k6kon"]
+[ext_resource type="Script" path="res://rooms/info_object.gd" id="4_mt7pi"]
 
 [node name="roomBreak" type="Node2D"]
 script = ExtResource("1_o8eyr")
@@ -16,3 +17,31 @@ next_room = "roomPainting"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door-side"]
 polygon = PackedVector2Array(-674, 75, -627, -29, -569, -89, -490, -63, -444, 16, -427, 207, -639, 348)
+
+[node name="Food" type="Area2D" parent="Room"]
+script = ExtResource("4_mt7pi")
+message = "You see some leftover crumps... Looks old and disgusting"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Food"]
+polygon = PackedVector2Array(-235, 121, -189, 109, -142, 119, -131, 141, -161, 160, -204, 160, -241, 144)
+
+[node name="Knife" type="Area2D" parent="Room"]
+script = ExtResource("4_mt7pi")
+message = "Yup, thats a knife"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Knife"]
+polygon = PackedVector2Array(48, 122, 122, 150, 120, 163, 92, 151, 87, 165, 37, 146)
+
+[node name="Beer_jug" type="Area2D" parent="Room"]
+script = ExtResource("4_mt7pi")
+message = "Darn, its empty"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Beer_jug"]
+polygon = PackedVector2Array(-81, 86, -53, 96, -60, 122, -71, 119, -66, 134, -90, 145, -118, 143, -121, 98, -86, 83)
+
+[node name="Coins" type="Area2D" parent="Room"]
+script = ExtResource("4_mt7pi")
+message = "Don't you dare think about it, you are a honest person"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Coins"]
+polygon = PackedVector2Array(318, 56, 350, 63, 354, 124, 359, 147, 333, 151, 334, 138, 318, 131, 308, 137, 291, 127, 302, 117)
