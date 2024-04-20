@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://do73ff1n8tt0u"]
 
-[ext_resource type="Texture2D" uid="uid://b8fowc3coqrlr" path="res://images/room3.5.png" id="1_faybx"]
 [ext_resource type="Script" path="res://rooms/break_room.gd" id="1_o8eyr"]
+[ext_resource type="Texture2D" uid="uid://bljwcrallm56x" path="res://images/break_room.png" id="2_6aw7p"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_k6kon"]
 
 [node name="roomBreak" type="Node2D"]
 script = ExtResource("1_o8eyr")
 
 [node name="Room" type="Sprite2D" parent="."]
-texture = ExtResource("1_faybx")
+texture = ExtResource("2_6aw7p")
 
 [node name="Door-side" type="Area2D" parent="Room"]
 script = ExtResource("2_k6kon")
 next_room = "roomPainting"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door-side"]
-polygon = PackedVector2Array(-822, -141, -662, -117, -664, 335, -822, 445)
+polygon = PackedVector2Array(-674, 75, -627, -29, -569, -89, -490, -63, -444, 16, -427, 207, -639, 348)
