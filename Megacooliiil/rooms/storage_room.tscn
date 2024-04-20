@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfmkognun35go"]
+[gd_scene load_steps=7 format=3 uid="uid://dfmkognun35go"]
 
 [ext_resource type="Script" path="res://rooms/storage_room.gd" id="1_v5hrg"]
-[ext_resource type="Texture2D" uid="uid://krdpsdvchtd7" path="res://images/storage_room.png" id="2_mrem8"]
+[ext_resource type="Texture2D" uid="uid://d02s7y3l130ju" path="res://images/storage_room.png" id="2_mrem8"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_tkoll"]
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="4_qjkuc"]
 [ext_resource type="PackedScene" uid="uid://sbtwexwqtb4e" path="res://items/key3.tscn" id="5_ovc8y"]
+[ext_resource type="Script" path="res://rooms/info_object.gd" id="6_86ee0"]
 
 [node name="roomStorage" type="Node2D" node_paths=PackedStringArray("whisper_streamer")]
 script = ExtResource("1_v5hrg")
@@ -33,3 +34,35 @@ position = Vector2(-322, -5)
 polygon = PackedVector2Array(240, 96, 244, 96, 245, 138, 241, 138)
 
 [node name="whispers" type="AudioStreamPlayer2D" parent="Room"]
+
+[node name="Wrong_book" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "No no that book.."
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Wrong_book"]
+polygon = PackedVector2Array(-75, 81, -61, 70, -50, 70, -47, 78, -62, 90, -60, 133, -71, 133)
+
+[node name="Bit_book" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "01010111 01100101 01101100 01100011 01101111 01101101 01100101 00100000 01110100 01101111 00100000 01110111 01101111 01110010 01101100 01100100 00100000 01101111 01100110 00100000 01100010 01101001 01110100 01110011"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Bit_book"]
+polygon = PackedVector2Array(-728, -91, -706, -92, -698, 33, -719, 37, -727, 32)
+
+[node name="No_touch" type="Area2D" parent="."]
+script = ExtResource("6_86ee0")
+message = "No don't touch that"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="No_touch"]
+position = Vector2(76.558, 7.62939e-06)
+scale = Vector2(1.36161, 1)
+polygon = PackedVector2Array(-101.761, 52, -44.4754, 50, -48.1475, 2.99999, -90.0098, 4.99999)
+
+[node name="Pink" type="Area2D" parent="."]
+script = ExtResource("6_86ee0")
+message = "No it's pink"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pink"]
+position = Vector2(76.558, 7.62939e-06)
+scale = Vector2(1.36161, 1)
+polygon = PackedVector2Array(79.6426, -115, 89.1902, -116, 89.9246, -148, 81.1115, -148)
