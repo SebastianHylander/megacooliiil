@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://djedo3nhb5k80"]
 
 [ext_resource type="Script" path="res://rooms/jail_room.gd" id="1_2nt6m"]
-[ext_resource type="Texture2D" uid="uid://cfrsxdynym13x" path="res://images/jail_room.png" id="2_34e5d"]
+[ext_resource type="Texture2D" uid="uid://cifddjqj642db" path="res://images/jail_room.png" id="2_34e5d"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_lpsml"]
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="3_o0urh"]
 [ext_resource type="PackedScene" uid="uid://7lk0cy4hpjk6" path="res://items/key.tscn" id="4_bbsk6"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="6_a4hxg"]
-[ext_resource type="AudioStream" uid="uid://o03skick33tv" path="res://sounds/uhh.wav" id="7_p0fmh"]
+[ext_resource type="AudioStream" uid="uid://dti11di465ppo" path="res://sounds/uhh.wav" id="7_p0fmh"]
 
 [node name="roomJail" type="Node2D"]
 script = ExtResource("1_2nt6m")
