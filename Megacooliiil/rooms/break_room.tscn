@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://do73ff1n8tt0u"]
+[gd_scene load_steps=6 format=3 uid="uid://do73ff1n8tt0u"]
 
 [ext_resource type="Script" path="res://rooms/break_room.gd" id="1_o8eyr"]
-[ext_resource type="Texture2D" uid="uid://c677tpgefr8yf" path="res://images/break_room.png" id="2_6aw7p"]
+[ext_resource type="Texture2D" uid="uid://dgclnqplwobf5" path="res://images/break_room.png" id="2_6aw7p"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_k6kon"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="4_mt7pi"]
+[ext_resource type="AudioStream" uid="uid://uhum11dwel5n" path="res://sounds/painting.wav" id="5_37ywh"]
 
 [node name="roomBreak" type="Node2D"]
 script = ExtResource("1_o8eyr")
@@ -59,3 +60,6 @@ message = "Rock!?"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Rock"]
 polygon = PackedVector2Array(846, 58, 930, 87, 926, 242, 833, 204)
+
+[node name="painting_sound" type="AudioStreamPlayer2D" parent="Room"]
+stream = ExtResource("5_37ywh")

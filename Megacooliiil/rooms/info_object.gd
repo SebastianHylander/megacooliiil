@@ -3,7 +3,7 @@ extends Area2D
 @export var message : String
 @export var cell_sound : bool
 
-var uhhSound = preload("res://uhh.wav")
+var uhhSound = preload("res://sounds/uhh.wav")
 var sound_player := AudioStreamPlayer.new()
 
 
