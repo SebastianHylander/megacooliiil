@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://7lk0cy4hpjk6"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bh1c7"]
-load_path = "res://.godot/imported/key.png-89add4ff7b256b968641554c25a0a9f8.ctex"
+[ext_resource type="Texture2D" uid="uid://dve4em31rlhjs" path="res://images/key1-.png" id="1_l812y"]
 
 [node name="Key" type="Node2D"]
 metadata/key_name = "jail_key"
@@ -9,5 +8,5 @@ metadata/key_name = "jail_key"
 [node name="Key" type="Sprite2D" parent="."]
 position = Vector2(0, -9.53674e-07)
 scale = Vector2(0.178571, 0.151515)
-texture = SubResource("CompressedTexture2D_bh1c7")
+texture = ExtResource("1_l812y")
 centered = false
