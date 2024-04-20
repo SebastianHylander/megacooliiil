@@ -34,6 +34,7 @@ position = Vector2(-322, -5)
 polygon = PackedVector2Array(240, 96, 244, 96, 245, 138, 241, 138)
 
 [node name="whispers" type="AudioStreamPlayer2D" parent="Room"]
+volume_db = 24.0
 
 [node name="Wrong_book" type="Area2D" parent="Room"]
 script = ExtResource("6_86ee0")

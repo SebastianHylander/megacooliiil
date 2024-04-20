@@ -199,6 +199,8 @@ visible = false
 script = ExtResource("6_qw6mn")
 
 [node name="TextureRect" type="TextureRect" parent="UILayer/BackArrow"]
+modulate = Color(1, 1, 1, 0.705882)
+self_modulate = Color(1, 1, 1, 0.721569)
 offset_left = 1304.0
 offset_top = 1022.0
 offset_right = 1373.0
@@ -212,4 +214,5 @@ polygon = PackedVector2Array(19, 3, 50, 2, 51, 19, 67, 20, 35, 37, 4, 20, 18, 19
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_epct2")
+volume_db = -10.306
 autoplay = true

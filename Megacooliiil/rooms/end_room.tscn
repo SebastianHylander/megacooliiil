@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://esi3ftfnue3m"]
 
 [ext_resource type="Script" path="res://rooms/end_room.gd" id="1_4dutx"]
-[ext_resource type="Texture2D" uid="uid://50lrcwldux17" path="res://images/roomEnd.png" id="1_fq2ru"]
+[ext_resource type="Texture2D" uid="uid://duy1qvg2b6wu3" path="res://images/end_room.png" id="2_cxf3s"]
 
 [node name="roomEnd" type="Node2D"]
 script = ExtResource("1_4dutx")
 prev_room = "roomStorage"
 
 [node name="Room" type="Sprite2D" parent="."]
-texture = ExtResource("1_fq2ru")
+texture = ExtResource("2_cxf3s")
