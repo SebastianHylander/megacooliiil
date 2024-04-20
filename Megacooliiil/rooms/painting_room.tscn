@@ -20,7 +20,7 @@ locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Painting"]
 position = Vector2(-513, -72)
-polygon = PackedVector2Array(133, -60, 367, -63, 361, 220, 128, 215)
+polygon = PackedVector2Array(162, -27, 324, -27, 320, 185, 162, 183)
 
 [node name="Door-side" type="Area2D" parent="Room"]
 script = ExtResource("2_73bb4")
