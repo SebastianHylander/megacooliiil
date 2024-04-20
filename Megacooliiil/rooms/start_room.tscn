@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cspsb3nfjqeh2"]
 
-[ext_resource type="Texture2D" uid="uid://cva20ckypuhpe" path="res://images/room.png" id="1_43fwl"]
+[ext_resource type="Texture2D" uid="uid://b6gitjvaenr22" path="res://images/start_room_open.png" id="1_48kcr"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="3_i7t42"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="3_xi533"]
 
@@ -9,14 +9,14 @@
 [node name="Room" type="Sprite2D" parent="."]
 position = Vector2(1, -9.53674e-07)
 scale = Vector2(1.11221, 1.11221)
-texture = ExtResource("1_43fwl")
+texture = ExtResource("1_48kcr")
 
 [node name="Door" type="Area2D" parent="Room"]
 script = ExtResource("3_xi533")
 next_room = "roomJail"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
-polygon = PackedVector2Array(42.2582, -62.0386, 43.1573, 113.288, -124.077, 115.985, -115.985, -48.552, -72.828, -49.4511, -47.6529, -58.4422, -28.7715, -60.2404)
+polygon = PackedVector2Array(51.2493, -119.582, 58.4422, 198.703, -149.252, 211.291, -155.546, -123.178)
 
 [node name="Bill" type="Area2D" parent="Room"]
 position = Vector2(-0.899111, 8.57458e-07)
@@ -25,4 +25,4 @@ script = ExtResource("3_i7t42")
 message = "You recognize the face. It is you old friend Bill. He seems to be dead?"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Bill"]
-polygon = PackedVector2Array(24, 267, 46, 251, 86, 246, 108, 240, 113, 223, 76, 221, 60, 213, 59, 205, 80, 205, 98, 193, 128, 199, 149, 211, 152, 199, 157, 182, 184, 170, 200, 173, 209, 191, 208, 216, 200, 233, 189, 245, 191, 267, 189, 291, 176, 285, 169, 271, 167, 248, 156, 251, 144, 264, 125, 281, 97, 296, 79, 308, 65, 307, 68, 297, 89, 283, 101, 273, 104, 264, 79, 276, 61, 276, 45, 277, 34, 274)
+polygon = PackedVector2Array(440, 246, 309, 306, 304, 319, 292, 327, 279, 313, 265, 323, 292, 353, 320, 336, 333, 335, 440, 282, 447, 291, 343, 360, 344, 373, 331, 382, 316, 370, 307, 378, 309, 387, 329, 409, 363, 389, 378, 390, 496, 297, 504, 294, 517, 286, 539, 207, 546, 273, 537, 291, 543, 301, 551, 298, 559, 273, 555, 182, 548, 169, 535, 158, 538, 144, 553, 147, 565, 144, 581, 136, 579, 124, 574, 100, 557, 80, 532, 79, 511, 83, 504, 115, 517, 136, 513, 143, 490, 143, 464, 147, 441, 165, 411, 225, 400, 232, 404, 240, 415, 245, 420, 241, 421, 228, 459, 177, 476, 163)
