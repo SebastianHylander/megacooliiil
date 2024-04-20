@@ -8,9 +8,12 @@ var rooms = {
 	"roomJail": roomJail
 }
 
+var currentRoom
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_child(roomStart)
+	currentRoom = roomStart
 	pass # Replace with function body.
 
 
@@ -18,6 +21,8 @@ func _ready():
 func _process(delta):
 	pass
 
-func change_room(from_room, to_room):
-	remove_child(from_room)
-	add_child(to_room)
+func change_room(to_room):
+	var newRoom = rooms[to_room]
+	remove_child(currentRoom)
+	add_child(newRoom)
+	currentRoom = newRoom
