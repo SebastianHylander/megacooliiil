@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://do73ff1n8tt0u"]
+[gd_scene load_steps=4 format=3 uid="uid://do73ff1n8tt0u"]
 
 [ext_resource type="Texture2D" uid="uid://b8fowc3coqrlr" path="res://images/room3.5.png" id="1_faybx"]
+[ext_resource type="Script" path="res://rooms/break_room.gd" id="1_o8eyr"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_k6kon"]
 
 [node name="roomBreak" type="Node2D"]
+script = ExtResource("1_o8eyr")
 
 [node name="Room" type="Sprite2D" parent="."]
 texture = ExtResource("1_faybx")

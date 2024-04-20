@@ -23,6 +23,7 @@ func _ready():
 	add_child(roomStart)
 	var camera = get_child(0)
 	currentRoom = roomStart
+	currentRoom.enter()
 	pass # Replace with function body.
 
 
@@ -33,5 +34,9 @@ func _process(delta):
 func change_room(to_room):
 	var newRoom = rooms[to_room]
 	remove_child(currentRoom)
+	newRoom.enter(self)
 	add_child(newRoom)
 	currentRoom = newRoom
+
+func get_room(roomname):
+	return rooms[roomname]

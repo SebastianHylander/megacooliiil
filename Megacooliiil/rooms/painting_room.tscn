@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwrxd44xykycu"]
+[gd_scene load_steps=4 format=3 uid="uid://dwrxd44xykycu"]
 
+[ext_resource type="Script" path="res://rooms/painting_room.gd" id="1_osk2a"]
 [ext_resource type="Texture2D" uid="uid://dufrybjw67pby" path="res://images/room3.png" id="1_pw31i"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_73bb4"]
 
 [node name="roomPainting" type="Node2D"]
+script = ExtResource("1_osk2a")
 
 [node name="Room" type="Sprite2D" parent="."]
 texture = ExtResource("1_pw31i")
@@ -13,6 +15,7 @@ script = ExtResource("2_73bb4")
 next_room = "roomStorage"
 unlocked_message = "You climb through the hole in the wall"
 locked_message = "It is a painting"
+locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Painting"]
 position = Vector2(-513, -72)

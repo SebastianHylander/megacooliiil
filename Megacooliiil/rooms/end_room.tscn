@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://esi3ftfnue3m"]
+[gd_scene load_steps=3 format=3 uid="uid://esi3ftfnue3m"]
 
+[ext_resource type="Script" path="res://rooms/end_room.gd" id="1_4dutx"]
 [ext_resource type="Texture2D" uid="uid://50lrcwldux17" path="res://images/roomEnd.png" id="1_fq2ru"]
 
 [node name="roomEnd" type="Node2D"]
+script = ExtResource("1_4dutx")
 
 [node name="Room" type="Sprite2D" parent="."]
 texture = ExtResource("1_fq2ru")
