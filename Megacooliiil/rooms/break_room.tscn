@@ -52,3 +52,10 @@ message = "hmm... nice chandelier"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Chandelier"]
 polygon = PackedVector2Array(83, -164, 87, -194, 83, -217, 46, -222, 23, -283, 19, -340, 29, -357, 41, -335, 47, -286, 59, -256, 81, -251, 76, -271, 58, -288, 59, -331, 64, -349, 72, -331, 72, -299, 81, -291, 82, -323, 107, -335, 118, -294, 125, -285, 138, -293, 141, -332, 149, -349, 157, -335, 157, -291, 148, -268, 130, -266, 130, -255, 154, -256, 166, -283, 168, -325, 173, -341, 183, -322, 185, -267, 179, -240, 152, -217, 129, -221, 121, -205, 150, -170, 132, -154, 102, -152)
+
+[node name="Rock" type="Area2D" parent="Room"]
+script = ExtResource("4_mt7pi")
+message = "Rock!?"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Rock"]
+polygon = PackedVector2Array(846, 58, 930, 87, 926, 242, 833, 204)
