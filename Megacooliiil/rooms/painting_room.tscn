@@ -8,13 +8,13 @@
 [node name="Room" type="Sprite2D" parent="."]
 texture = ExtResource("1_pw31i")
 
-[node name="Door" type="Area2D" parent="Room"]
+[node name="Painting" type="Area2D" parent="Room"]
 script = ExtResource("2_73bb4")
 next_room = "roomStorage"
 unlocked_message = "You climb through the hole in the wall"
 locked_message = "It is a painting"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Painting"]
 position = Vector2(-513, -72)
 polygon = PackedVector2Array(138, -93, 435, -89, 437, 226, 144, 226)
 
@@ -24,3 +24,10 @@ next_room = "roomBreak"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door-side"]
 polygon = PackedVector2Array(675, -60, 830, -79, 832, 446, 663, 325)
+
+[node name="Door" type="Area2D" parent="Room"]
+script = ExtResource("2_73bb4")
+locked = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
+polygon = PackedVector2Array(135, -86, 432, -93, 432, 269, 137, 269)
