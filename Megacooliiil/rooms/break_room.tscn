@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://do73ff1n8tt0u"]
+
+[ext_resource type="Texture2D" uid="uid://b8fowc3coqrlr" path="res://images/room3.5.png" id="1_faybx"]
+
+[node name="roomBreak" type="Node2D"]
+
+[node name="Room" type="Sprite2D" parent="."]
+texture = ExtResource("1_faybx")

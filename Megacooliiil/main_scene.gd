@@ -2,10 +2,18 @@ extends Node2D
 
 var roomStart = preload("res://rooms/start_room.tscn").instantiate()
 var roomJail = preload("res://rooms/jail_room.tscn").instantiate()
+var roomPainting = preload("res://rooms/painting_room.tscn").instantiate()
+var roomBreak = preload("res://rooms/break_room.tscn").instantiate()
+var roomStorage = preload("res://rooms/storage_room.tscn").instantiate()
+var roomEnd = preload("res://rooms/end_room.tscn").instantiate()
 
 var rooms = {
 	"roomStart": roomStart,
-	"roomJail": roomJail
+	"roomJail": roomJail,
+	"roomPainting": roomPainting,
+	"roomBreak": roomBreak,
+	"roomStorage": roomStorage,
+	"roomEnd": roomEnd
 }
 
 var currentRoom
