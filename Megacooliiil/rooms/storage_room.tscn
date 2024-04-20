@@ -6,9 +6,10 @@
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="4_qjkuc"]
 [ext_resource type="PackedScene" path="res://items/key3.tscn" id="5_ovc8y"]
 
-[node name="roomStorage" type="Node2D"]
+[node name="roomStorage" type="Node2D" node_paths=PackedStringArray("whisper_streamer")]
 script = ExtResource("1_v5hrg")
 prev_room = "roomPainting"
+whisper_streamer = NodePath("Room/whispers")
 
 [node name="Room" type="Sprite2D" parent="."]
 texture = ExtResource("1_wrke7")
@@ -29,3 +30,5 @@ message = "Hidden behind the overflowing shelves you manage to spot the key"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Spot"]
 polygon = PackedVector2Array(234, 86, 341, 86, 343, 165, 229, 166)
+
+[node name="whispers" type="AudioStreamPlayer2D" parent="Room"]
