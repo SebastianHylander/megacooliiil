@@ -1,18 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://cspsb3nfjqeh2"]
+[gd_scene load_steps=6 format=3 uid="uid://cspsb3nfjqeh2"]
 
 [ext_resource type="Texture2D" uid="uid://d3nvbg38alu51" path="res://images/room.png" id="1_8vh0t"]
+[ext_resource type="Script" path="res://bill.gd" id="2_lqa1u"]
+[ext_resource type="Script" path="res://Door.gd" id="3_wu7wb"]
+[ext_resource type="FontFile" uid="uid://b41vro38bvd87" path="res://Gabrielle.ttf" id="4_bjwuh"]
+[ext_resource type="Script" path="res://Textfield.gd" id="5_tfxqh"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Node" type="Node" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Room" type="Sprite2D" parent="."]
 position = Vector2(1, -9.53674e-07)
 scale = Vector2(1.11221, 1.11221)
 texture = ExtResource("1_8vh0t")
 
-[node name="Polygon2D" type="Polygon2D" parent="Room"]
-color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(26.0741, 243.658, 28.7714, 230.172, 94.4063, 217.584, 99.8009, 201.4, 57.5429, 194.207, 49.4509, 183.418, 91.709, 176.225, 130.371, 192.409, 139.362, 162.738, 172.629, 153.747, 192.409, 185.216, 173.528, 220.281, 171.73, 260.741, 152.848, 252.649, 150.151, 227.474, 129.472, 234.667, 104.296, 256.246, 58.442, 277.824, 94.4063, 242.759, 48.5518, 250.851)
+[node name="Bill" type="Sprite2D" parent="Room"]
+position = Vector2(-0.899111, 8.57458e-07)
+scale = Vector2(0.899111, 0.899111)
+
+[node name="Area2D" type="Area2D" parent="Room/Bill"]
+script = ExtResource("2_lqa1u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Bill/Area2D"]
+polygon = PackedVector2Array(24, 267, 46, 251, 86, 246, 108, 240, 113, 223, 76, 221, 60, 213, 59, 205, 80, 205, 98, 193, 128, 199, 149, 211, 152, 199, 157, 182, 184, 170, 200, 173, 209, 191, 208, 216, 200, 233, 189, 245, 191, 267, 189, 291, 176, 285, 169, 271, 167, 248, 156, 251, 144, 264, 125, 281, 97, 296, 79, 308, 65, 307, 68, 297, 89, 283, 101, 273, 104, 264, 79, 276, 61, 276, 45, 277, 34, 274)
+
+[node name="Door" type="Area2D" parent="Room"]
+script = ExtResource("3_wu7wb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
+polygon = PackedVector2Array(42.2582, -62.0386, 43.1573, 113.288, -124.077, 115.985, -115.985, -48.552, -72.828, -49.4511, -47.6529, -58.4422, -28.7715, -60.2404)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(3, -16)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 103.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/Panel/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Textfield" type="Label" parent="CanvasLayer/MarginContainer/Panel/MarginContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("4_bjwuh")
+theme_override_font_sizes/font_size = 48
+text = "Hello World!"
+script = ExtResource("5_tfxqh")
