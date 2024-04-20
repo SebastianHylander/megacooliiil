@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfmkognun35go"]
 
 [ext_resource type="Texture2D" uid="uid://bsnvnpx4k55g1" path="res://images/room4.png" id="1_wrke7"]
-[ext_resource type="Script" path="res://rooms/storage_door.gd" id="2_ay7hg"]
+[ext_resource type="Script" path="res://rooms/door.gd" id="2_tkoll"]
 
 [node name="roomStorage" type="Node2D"]
 
@@ -9,7 +9,8 @@
 texture = ExtResource("1_wrke7")
 
 [node name="Door" type="Area2D" parent="Room"]
-script = ExtResource("2_ay7hg")
+script = ExtResource("2_tkoll")
+next_room = "roomEnd"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
 polygon = PackedVector2Array(-466, -115, -213, -117, -208, 268, -465, 266)
