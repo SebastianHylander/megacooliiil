@@ -84,9 +84,26 @@ theme_override_constants/separation = 10
 script = ExtResource("4_td557")
 
 [node name="Item1" type="Panel" parent="UILayer/Inventory/Items"]
-clip_contents = true
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 script = ExtResource("5_gpcit")
+
+[node name="Item2" type="Panel" parent="UILayer/Inventory/Items"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Item3" type="Panel" parent="UILayer/Inventory/Items"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Item4" type="Panel" parent="UILayer/Inventory/Items"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Item5" type="Panel" parent="UILayer/Inventory/Items"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Item6" type="Panel" parent="UILayer/Inventory/Items"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
