@@ -18,7 +18,7 @@ position = Vector2(3, -16)
 custom_minimum_size = Vector2(0, 100)
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 100.0
+offset_bottom = 168.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
@@ -52,12 +52,16 @@ offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Textfield" type="Label" parent="UILayer/MarginContainer/Panel/MarginContainer/Panel/HBoxContainer"]
+[node name="Textfield" type="Label" parent="UILayer/MarginContainer/Panel/MarginContainer/Panel"]
 layout_mode = 2
-size_flags_horizontal = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 1095.0
+offset_bottom = 119.0
 theme_override_fonts/font = ExtResource("1_qebin")
-theme_override_font_sizes/font_size = 48
-text = "Hello World!"
+theme_override_font_sizes/font_size = 38
+text = "Awakening to the chill of stone against your back, you find yourself imprisoned in a dark dungeon cell. You have no memory of how you arrived."
+autowrap_mode = 3
 script = ExtResource("2_1p3x7")
 
 [node name="Inventory" type="MarginContainer" parent="UILayer"]
