@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://173cm8pck637"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_ckb3h"]
-[ext_resource type="FontFile" uid="uid://y0cadiju4cdy" path="res://Gabrielle.ttf" id="1_qebin"]
+[ext_resource type="FontFile" uid="uid://b41vro38bvd87" path="res://Gabrielle.ttf" id="1_qebin"]
 [ext_resource type="Script" path="res://Textfield.gd" id="2_1p3x7"]
 [ext_resource type="Script" path="res://Items.gd" id="4_td557"]
 [ext_resource type="Script" path="res://Item.gd" id="5_gpcit"]
@@ -85,6 +85,17 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("5_gpcit")
 
+[node name="selected_frame" type="Polygon2D" parent="UILayer/Inventory/Items/Item1"]
+visible = false
+color = Color(0.960784, 0.403922, 1, 1)
+polygon = PackedVector2Array(0, 0, 80, 0, 80, 80, 0, 80)
+
+[node name="Button" type="Button" parent="UILayer/Inventory/Items/Item1"]
+visibility_layer = 7
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+
 [node name="Item2" type="Panel" parent="UILayer/Inventory/Items"]
 clip_contents = true
 custom_minimum_size = Vector2(80, 80)
@@ -92,6 +103,17 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("5_gpcit")
+
+[node name="selected_frame" type="Polygon2D" parent="UILayer/Inventory/Items/Item2"]
+visible = false
+color = Color(0.960784, 0.403922, 1, 1)
+polygon = PackedVector2Array(0, 0, 80, 0, 80, 80, 0, 80)
+
+[node name="Button" type="Button" parent="UILayer/Inventory/Items/Item2"]
+visibility_layer = 7
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
 
 [node name="Item3" type="Panel" parent="UILayer/Inventory/Items"]
 clip_contents = true
@@ -101,6 +123,17 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("5_gpcit")
 
+[node name="selected_frame" type="Polygon2D" parent="UILayer/Inventory/Items/Item3"]
+visible = false
+color = Color(0.960784, 0.403922, 1, 1)
+polygon = PackedVector2Array(0, 0, 80, 0, 80, 80, 0, 80)
+
+[node name="Button" type="Button" parent="UILayer/Inventory/Items/Item3"]
+visibility_layer = 7
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+
 [node name="Item4" type="Panel" parent="UILayer/Inventory/Items"]
 clip_contents = true
 custom_minimum_size = Vector2(80, 80)
@@ -108,6 +141,17 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("5_gpcit")
+
+[node name="selected_frame" type="Polygon2D" parent="UILayer/Inventory/Items/Item4"]
+visible = false
+color = Color(0.960784, 0.403922, 1, 1)
+polygon = PackedVector2Array(0, 0, 80, 0, 80, 80, 0, 80)
+
+[node name="Button" type="Button" parent="UILayer/Inventory/Items/Item4"]
+visibility_layer = 7
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
 
 [node name="Item5" type="Panel" parent="UILayer/Inventory/Items"]
 clip_contents = true
@@ -117,6 +161,17 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("5_gpcit")
 
+[node name="selected_frame" type="Polygon2D" parent="UILayer/Inventory/Items/Item5"]
+visible = false
+color = Color(0.960784, 0.403922, 1, 1)
+polygon = PackedVector2Array(0, 0, 80, 0, 80, 80, 0, 80)
+
+[node name="Button" type="Button" parent="UILayer/Inventory/Items/Item5"]
+visibility_layer = 7
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+
 [node name="Item6" type="Panel" parent="UILayer/Inventory/Items"]
 clip_contents = true
 custom_minimum_size = Vector2(80, 80)
@@ -124,3 +179,14 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("5_gpcit")
+
+[node name="selected_frame" type="Polygon2D" parent="UILayer/Inventory/Items/Item6"]
+visible = false
+color = Color(0.960784, 0.403922, 1, 1)
+polygon = PackedVector2Array(0, 0, 80, 0, 80, 80, 0, 80)
+
+[node name="Button" type="Button" parent="UILayer/Inventory/Items/Item6"]
+visibility_layer = 7
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0

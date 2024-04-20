@@ -15,6 +15,6 @@ func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var hotbar = get_node('../../../UILayer/Inventory/Items')
 		hotbar.add_item(item.instantiate())
-		var textfield = get_node('../../../UILayer/MarginContainer/Panel/MarginContainer/Panel/HBoxContainer/Textfield')
+		var textfield = get_node('../../../UILayer/MarginContainer/Panel/MarginContainer/Panel/Textfield')
 		textfield.write_text(message)
 		self.queue_free()

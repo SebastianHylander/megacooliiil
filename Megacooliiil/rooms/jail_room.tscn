@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://djedo3nhb5k80"]
 
-[ext_resource type="Texture2D" uid="uid://bv1643071acc5" path="res://images/room2.png" id="1_1cmo4"]
+[ext_resource type="Texture2D" uid="uid://ckitpat381p82" path="res://images/room2.png" id="1_1cmo4"]
 [ext_resource type="Script" path="res://rooms/jail_room.gd" id="1_2nt6m"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_lpsml"]
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="3_o0urh"]
@@ -19,6 +19,8 @@ position = Vector2(-0.897966, -0.89708)
 scale = Vector2(0.898021, 0.897107)
 script = ExtResource("2_lpsml")
 next_room = "roomPainting"
+key_name = "jail_key"
+locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
 polygon = PackedVector2Array(-158, -118, 166, -116, 170, 294, -165, 300)
