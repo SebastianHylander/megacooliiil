@@ -21,6 +21,9 @@ var currentRoom
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_child(roomStart)
+	var camera = get_child(0)
+	#camera.scale.x = roomStart.get_child(0).texture.get_width()/camera.get_width()
+	#camera.scale.y = roomStart.get_child(0).texture.get_height()/camera.get_height()
 	currentRoom = roomStart
 	pass # Replace with function body.
 
