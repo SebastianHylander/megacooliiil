@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cspsb3nfjqeh2"]
 
-[ext_resource type="Texture2D" uid="uid://nhtcrtutrw1g" path="res://images/start_room_open.png" id="1_48kcr"]
+[ext_resource type="Texture2D" uid="uid://b6gitjvaenr22" path="res://images/start_room_open.png" id="1_48kcr"]
 [ext_resource type="Script" path="res://rooms/start_room.gd" id="1_m0eoc"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="3_i7t42"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="3_xi533"]

@@ -17,7 +17,7 @@ func _input_event(viewport, event, shape_idx):
 		else:
 			var inventory = get_node('../../../UILayer/Inventory/Items')
 			var item = inventory.selected
-			if item.holding:
+			if item:
 				if item.holding.get_meta('key_name') == key_name:
 					locked = false
 					textfield.write_text("You unlocked the door")

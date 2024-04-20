@@ -20,6 +20,7 @@ func remove_item(item : Node):
 	for panel in get_children():
 		if panel == item:
 			panel.remove_item()
+			selected = null
 			break
 	
 func select_item(item : Panel):
