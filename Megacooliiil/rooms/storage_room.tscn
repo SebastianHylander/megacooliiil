@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dfmkognun35go"]
 
 [ext_resource type="Script" path="res://rooms/storage_room.gd" id="1_v5hrg"]
-[ext_resource type="Texture2D" uid="uid://shwxkrd8ayts" path="res://images/room4.png" id="1_wrke7"]
+[ext_resource type="Texture2D" uid="uid://krdpsdvchtd7" path="res://images/storage_room.png" id="2_mrem8"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_tkoll"]
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="4_qjkuc"]
-[ext_resource type="PackedScene" path="res://items/key3.tscn" id="5_ovc8y"]
+[ext_resource type="PackedScene" uid="uid://sbtwexwqtb4e" path="res://items/key3.tscn" id="5_ovc8y"]
 
 [node name="roomStorage" type="Node2D" node_paths=PackedStringArray("whisper_streamer")]
 script = ExtResource("1_v5hrg")
@@ -12,7 +12,7 @@ prev_room = "roomPainting"
 whisper_streamer = NodePath("Room/whispers")
 
 [node name="Room" type="Sprite2D" parent="."]
-texture = ExtResource("1_wrke7")
+texture = ExtResource("2_mrem8")
 
 [node name="Door" type="Area2D" parent="Room"]
 script = ExtResource("2_tkoll")
@@ -21,7 +21,7 @@ key_name = "end_key"
 locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
-polygon = PackedVector2Array(-466, -115, -213, -117, -208, 268, -465, 266)
+polygon = PackedVector2Array(-438, -129, -219, -133, -213, 214, -441, 214)
 
 [node name="Spot" type="Area2D" parent="Room"]
 script = ExtResource("4_qjkuc")
@@ -29,6 +29,7 @@ item = ExtResource("5_ovc8y")
 message = "Hidden behind the overflowing shelves you manage to spot the key"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Spot"]
-polygon = PackedVector2Array(234, 86, 341, 86, 343, 165, 229, 166)
+position = Vector2(-322, -5)
+polygon = PackedVector2Array(240, 96, 244, 96, 245, 138, 241, 138)
 
 [node name="whispers" type="AudioStreamPlayer2D" parent="Room"]
