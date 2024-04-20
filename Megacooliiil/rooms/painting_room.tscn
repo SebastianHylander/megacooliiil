@@ -11,9 +11,12 @@ texture = ExtResource("1_pw31i")
 [node name="Door" type="Area2D" parent="Room"]
 script = ExtResource("2_73bb4")
 next_room = "roomStorage"
+unlocked_message = "You climb through the hole in the wall"
+locked_message = "It is a painting"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
-polygon = PackedVector2Array(138, -93, 435, -89, 430, 266, 140, 270)
+position = Vector2(-513, -72)
+polygon = PackedVector2Array(138, -93, 435, -89, 437, 226, 144, 226)
 
 [node name="Door-side" type="Area2D" parent="Room"]
 script = ExtResource("2_73bb4")
