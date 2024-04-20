@@ -1,33 +1,33 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3ypl6wsipqac"]
 
-[ext_resource type="Texture2D" uid="uid://d3nvbg38alu51" path="res://images/room.png" id="3_rkkjn"]
-[ext_resource type="Script" path="res://bill.gd" id="4_v0rxy"]
-[ext_resource type="Script" path="res://Door.gd" id="5_47kub"]
+[ext_resource type="Texture2D" uid="uid://cva20ckypuhpe" path="res://images/room.png" id="1_43fwl"]
+[ext_resource type="Script" path="res://rooms/start_Bill.gd" id="2_eqb7k"]
+[ext_resource type="Script" path="res://rooms/start_door.gd" id="3_jwr4k"]
 [ext_resource type="Script" path="res://rooms/Area2D.gd" id="5_ao15i"]
 [ext_resource type="PackedScene" uid="uid://7lk0cy4hpjk6" path="res://items/key.tscn" id="6_y6lq8"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bh1c7"]
 load_path = "res://.godot/imported/key.png-89add4ff7b256b968641554c25a0a9f8.ctex"
 
-[node name="room1" type="Node2D"]
+[node name="roomStart" type="Node2D"]
 
 [node name="Room" type="Sprite2D" parent="."]
 position = Vector2(1, -9.53674e-07)
 scale = Vector2(1.11221, 1.11221)
-texture = ExtResource("3_rkkjn")
+texture = ExtResource("1_43fwl")
 
 [node name="Bill" type="Sprite2D" parent="Room"]
 position = Vector2(-0.899111, 8.57458e-07)
 scale = Vector2(0.899111, 0.899111)
 
 [node name="Area2D" type="Area2D" parent="Room/Bill"]
-script = ExtResource("4_v0rxy")
+script = ExtResource("2_eqb7k")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Bill/Area2D"]
 polygon = PackedVector2Array(24, 267, 46, 251, 86, 246, 108, 240, 113, 223, 76, 221, 60, 213, 59, 205, 80, 205, 98, 193, 128, 199, 149, 211, 152, 199, 157, 182, 184, 170, 200, 173, 209, 191, 208, 216, 200, 233, 189, 245, 191, 267, 189, 291, 176, 285, 169, 271, 167, 248, 156, 251, 144, 264, 125, 281, 97, 296, 79, 308, 65, 307, 68, 297, 89, 283, 101, 273, 104, 264, 79, 276, 61, 276, 45, 277, 34, 274)
 
 [node name="Door" type="Area2D" parent="Room"]
-script = ExtResource("5_47kub")
+script = ExtResource("3_jwr4k")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
 polygon = PackedVector2Array(42.2582, -62.0386, 43.1573, 113.288, -124.077, 115.985, -115.985, -48.552, -72.828, -49.4511, -47.6529, -58.4422, -28.7715, -60.2404)

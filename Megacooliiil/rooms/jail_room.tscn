@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://djedo3nhb5k80"]
+
+[ext_resource type="Texture2D" uid="uid://bv1643071acc5" path="res://images/room2.png" id="1_1cmo4"]
+[ext_resource type="Script" path="res://rooms/jail_door.gd" id="2_v4nh2"]
+
+[node name="roomJail" type="Node2D"]
+
+[node name="Room" type="Sprite2D" parent="."]
+position = Vector2(0.999939, 0.99997)
+scale = Vector2(1.11356, 1.11469)
+texture = ExtResource("1_1cmo4")
+
+[node name="Door" type="Area2D" parent="Room"]
+position = Vector2(-0.897966, -0.89708)
+scale = Vector2(0.898021, 0.897107)
+script = ExtResource("2_v4nh2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
+polygon = PackedVector2Array(-158, -118, 166, -116, 170, 294, -165, 300)
