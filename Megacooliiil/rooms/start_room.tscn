@@ -15,6 +15,7 @@ texture = ExtResource("1_48kcr")
 [node name="Door" type="Area2D" parent="Room"]
 script = ExtResource("3_xi533")
 next_room = "roomJail"
+unlocked_message = "You walk through the open cell door"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
 polygon = PackedVector2Array(51.2493, -119.582, 58.4422, 198.703, -149.252, 211.291, -155.546, -123.178)

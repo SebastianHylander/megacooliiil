@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ivmhwno7gn0t"]
+[gd_scene load_steps=2 format=3 uid="uid://sbtwexwqtb4e"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bh1c7"]
 load_path = "res://.godot/imported/key.png-89add4ff7b256b968641554c25a0a9f8.ctex"
 
-[node name="Key2" type="Node2D"]
-metadata/key_name = "break_key"
+[node name="Key3" type="Node2D"]
+metadata/key_name = "end_key"
 
 [node name="Key" type="Sprite2D" parent="."]
-modulate = Color(1.92523e-06, 0.680833, 0.915069, 1)
+modulate = Color(1, 0.309744, 0.739092, 1)
 position = Vector2(0, -9.53674e-07)
 scale = Vector2(0.178571, 0.151515)
 texture = SubResource("CompressedTexture2D_bh1c7")

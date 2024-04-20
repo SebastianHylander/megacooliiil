@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwrxd44xykycu"]
+[gd_scene load_steps=6 format=3 uid="uid://dwrxd44xykycu"]
 
 [ext_resource type="Script" path="res://rooms/painting_room.gd" id="1_osk2a"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_73bb4"]
 [ext_resource type="Texture2D" uid="uid://jxe114hilb7b" path="res://images/painting_room.png" id="2_ketms"]
+[ext_resource type="Script" path="res://rooms/CollectItem.gd" id="4_ujxt2"]
+[ext_resource type="PackedScene" uid="uid://ivmhwno7gn0t" path="res://items/key2.tscn" id="5_5f676"]
 
 [node name="roomPainting" type="Node2D"]
 script = ExtResource("1_osk2a")
@@ -14,8 +16,8 @@ texture = ExtResource("2_ketms")
 [node name="Painting" type="Area2D" parent="Room"]
 script = ExtResource("2_73bb4")
 next_room = "roomStorage"
-unlocked_message = "You climb through the hole in the wall"
-locked_message = "It is a painting"
+unlocked_message = "Was that hole always there? You climb through the hole in the wall and get into the next room"
+locked_message = "It is a painting of a man. He looks unhappy. You wonder if he is the owner of this place and why one would be unhappy if the owned a castle"
 locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Painting"]
@@ -25,6 +27,9 @@ polygon = PackedVector2Array(162, -27, 324, -27, 320, 185, 162, 183)
 [node name="Door-side" type="Area2D" parent="Room"]
 script = ExtResource("2_73bb4")
 next_room = "roomBreak"
+unlocked_message = "You walk through the door and into a guard break room"
+key_name = "break_key"
+locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door-side"]
 position = Vector2(-231, -135)
@@ -37,3 +42,11 @@ locked = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
 position = Vector2(-92, -92)
 polygon = PackedVector2Array(148, 58, 192, -6, 290, -23, 380, 21, 428, 97, 432, 269, 151, 277)
+
+[node name="Box" type="Area2D" parent="Room"]
+script = ExtResource("4_ujxt2")
+item = ExtResource("5_5f676")
+message = "You open the box on the table and find a key inside"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Box"]
+polygon = PackedVector2Array(-576, 152, -561, 160, -538, 145, -541, 132, -545, 123, -552, 123, -557, 126, -573, 139)

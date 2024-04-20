@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var prev_room : String
+
 var first_enter = true
 
 # Called when the room is entered
