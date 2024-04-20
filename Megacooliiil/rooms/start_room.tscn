@@ -1,13 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3ypl6wsipqac"]
+[gd_scene load_steps=4 format=3 uid="uid://bkuv5wos5mbqa"]
 
-[ext_resource type="Texture2D" uid="uid://cva20ckypuhpe" path="res://images/room.png" id="1_43fwl"]
+[ext_resource type="Texture2D" uid="uid://d3nvbg38alu51" path="res://images/room.png" id="1_43fwl"]
 [ext_resource type="Script" path="res://rooms/start_Bill.gd" id="2_eqb7k"]
 [ext_resource type="Script" path="res://rooms/start_door.gd" id="3_jwr4k"]
-[ext_resource type="Script" path="res://rooms/Area2D.gd" id="5_ao15i"]
-[ext_resource type="PackedScene" uid="uid://7lk0cy4hpjk6" path="res://items/key.tscn" id="6_y6lq8"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bh1c7"]
-load_path = "res://.godot/imported/key.png-89add4ff7b256b968641554c25a0a9f8.ctex"
 
 [node name="roomStart" type="Node2D"]
 
@@ -31,15 +26,3 @@ script = ExtResource("3_jwr4k")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
 polygon = PackedVector2Array(42.2582, -62.0386, 43.1573, 113.288, -124.077, 115.985, -115.985, -48.552, -72.828, -49.4511, -47.6529, -58.4422, -28.7715, -60.2404)
-
-[node name="Key" type="Sprite2D" parent="."]
-position = Vector2(-324, 249)
-texture = SubResource("CompressedTexture2D_bh1c7")
-
-[node name="Area2D" type="Area2D" parent="Key"]
-script = ExtResource("5_ao15i")
-item = ExtResource("6_y6lq8")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Key/Area2D"]
-position = Vector2(8, -10)
-polygon = PackedVector2Array(10, -22, 22, -12, 8, 1, 2, -1, -9, 11, 0, 23, -2, 36, -14, 44, -30, 39, -36, 26, -34, 7, -24, 5, -12, 5, 3, -14)

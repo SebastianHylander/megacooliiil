@@ -4,7 +4,6 @@ var holding : Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(holding)
 	pass # Replace with function body.
 
 

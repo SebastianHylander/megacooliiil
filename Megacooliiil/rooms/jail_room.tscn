@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://djedo3nhb5k80"]
+[gd_scene load_steps=6 format=3 uid="uid://bw1fpyb8lhl8x"]
 
-[ext_resource type="Texture2D" uid="uid://bv1643071acc5" path="res://images/room2.png" id="1_1cmo4"]
+[ext_resource type="Texture2D" uid="uid://ckitpat381p82" path="res://images/room2.png" id="1_1cmo4"]
 [ext_resource type="Script" path="res://rooms/jail_door.gd" id="2_v4nh2"]
+[ext_resource type="Script" path="res://rooms/CollectItem.gd" id="3_1q85t"]
+[ext_resource type="PackedScene" uid="uid://7lk0cy4hpjk6" path="res://items/key.tscn" id="4_kv2cx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xui48"]
+size = Vector2(156.377, 94.3284)
 
 [node name="roomJail" type="Node2D"]
 
@@ -17,3 +22,12 @@ script = ExtResource("2_v4nh2")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
 polygon = PackedVector2Array(-158, -118, 166, -116, 170, 294, -165, 300)
+
+[node name="LooseBrick" type="Area2D" parent="Room"]
+script = ExtResource("3_1q85t")
+item = ExtResource("4_kv2cx")
+message = "You found a key behind the loose brick!"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/LooseBrick"]
+position = Vector2(-348.371, 66.7689)
+shape = SubResource("RectangleShape2D_xui48")
