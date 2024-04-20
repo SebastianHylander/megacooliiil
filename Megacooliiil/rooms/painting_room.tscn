@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwrxd44xykycu"]
 
 [ext_resource type="Script" path="res://rooms/painting_room.gd" id="1_osk2a"]
-[ext_resource type="Texture2D" uid="uid://dufrybjw67pby" path="res://images/room3.png" id="1_pw31i"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_73bb4"]
+[ext_resource type="Texture2D" uid="uid://jxe114hilb7b" path="res://images/painting_room.png" id="2_ketms"]
 
 [node name="roomPainting" type="Node2D"]
 script = ExtResource("1_osk2a")
 prev_room = "roomJail"
 
 [node name="Room" type="Sprite2D" parent="."]
-texture = ExtResource("1_pw31i")
+texture = ExtResource("2_ketms")
 
 [node name="Painting" type="Area2D" parent="Room"]
 script = ExtResource("2_73bb4")
@@ -20,18 +20,20 @@ locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Painting"]
 position = Vector2(-513, -72)
-polygon = PackedVector2Array(138, -93, 435, -89, 437, 226, 144, 226)
+polygon = PackedVector2Array(133, -60, 367, -63, 361, 220, 128, 215)
 
 [node name="Door-side" type="Area2D" parent="Room"]
 script = ExtResource("2_73bb4")
 next_room = "roomBreak"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door-side"]
-polygon = PackedVector2Array(675, -60, 830, -79, 832, 446, 663, 325)
+position = Vector2(-231, -135)
+polygon = PackedVector2Array(670, 151, 723, 81, 802, 47, 865, 108, 898, 195, 869, 474, 663, 325)
 
 [node name="Door" type="Area2D" parent="Room"]
 script = ExtResource("2_73bb4")
 locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
-polygon = PackedVector2Array(135, -86, 432, -93, 432, 269, 137, 269)
+position = Vector2(-92, -92)
+polygon = PackedVector2Array(148, 58, 192, -6, 290, -23, 380, 21, 428, 97, 432, 269, 151, 277)

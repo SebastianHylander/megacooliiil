@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://djedo3nhb5k80"]
 
-[ext_resource type="Texture2D" uid="uid://bv1643071acc5" path="res://images/room2.png" id="1_1cmo4"]
 [ext_resource type="Script" path="res://rooms/jail_room.gd" id="1_2nt6m"]
+[ext_resource type="Texture2D" uid="uid://8w6h6oo8dkx6" path="res://images/jail_room.png" id="2_34e5d"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_lpsml"]
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="3_o0urh"]
 [ext_resource type="PackedScene" uid="uid://7lk0cy4hpjk6" path="res://items/key.tscn" id="4_bbsk6"]
@@ -13,7 +13,7 @@ prev_room = "roomStart"
 [node name="Room" type="Sprite2D" parent="."]
 position = Vector2(0.999939, 0.99997)
 scale = Vector2(1.11356, 1.11469)
-texture = ExtResource("1_1cmo4")
+texture = ExtResource("2_34e5d")
 
 [node name="Door" type="Area2D" parent="Room"]
 position = Vector2(-0.897966, -0.89708)
@@ -24,7 +24,8 @@ key_name = "jail_key"
 locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Door"]
-polygon = PackedVector2Array(-158, -118, 166, -116, 170, 294, -165, 300)
+position = Vector2(-79, -76.0003)
+polygon = PackedVector2Array(-166, 100, -107, -6.00002, 18, -35.0001, 144, 11, 217, 106, 214, 289.001, -178, 299.001)
 
 [node name="Brick" type="Area2D" parent="Room"]
 script = ExtResource("3_o0urh")
@@ -32,4 +33,5 @@ item = ExtResource("4_bbsk6")
 message = "You found a key behind a brick"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Brick"]
-polygon = PackedVector2Array(-420.274, 25.1191, -273.896, 25.1191, -276.59, 105.859, -420.274, 104.065)
+position = Vector2(11.6743, -34.0902)
+polygon = PackedVector2Array(-418.478, 23.3249, -316.103, 21.5307, -325.982, 92.4024, -419.376, 93.2995)
