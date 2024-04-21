@@ -6,6 +6,7 @@ var roomPainting = preload("res://rooms/painting_room.tscn").instantiate()
 var roomBreak = preload("res://rooms/break_room.tscn").instantiate()
 var roomStorage = preload("res://rooms/storage_room.tscn").instantiate()
 var roomEnd = preload("res://rooms/end_room.tscn").instantiate()
+var roomOutside = preload("res://rooms/outside.tscn").instantiate()
 
 var rooms = {
 	"roomStart": roomStart,
@@ -13,7 +14,8 @@ var rooms = {
 	"roomPainting": roomPainting,
 	"roomBreak": roomBreak,
 	"roomStorage": roomStorage,
-	"roomEnd": roomEnd
+	"roomEnd": roomEnd,
+	"roomOutside" : roomOutside
 }
 
 var currentRoom
@@ -46,3 +48,8 @@ func change_room(to_room):
 
 func get_room(roomname):
 	return rooms[roomname]
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
+

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cspsb3nfjqeh2"]
 
-[ext_resource type="Texture2D" uid="uid://b6gitjvaenr22" path="res://images/start_room_open.png" id="1_48kcr"]
+[ext_resource type="Texture2D" uid="uid://blmjiax8573m5" path="res://images/start_room_open.png" id="1_48kcr"]
 [ext_resource type="Script" path="res://rooms/start_room.gd" id="1_m0eoc"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="3_i7t42"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="3_xi533"]
@@ -35,3 +35,11 @@ message = "You eat the moss. It tastes... mossy. "
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Area2D"]
 polygon = PackedVector2Array(-496.309, 149.252, -406.398, 151.051, -408.196, 163.638, -417.187, 155.546, -426.178, 156.445, -424.38, 195.107, -430.674, 190.611, -436.968, 156.445, -463.042, 154.647, -457.647, 169.033, -449.555, 180.721, -449.555, 197.804, -462.143, 181.62, -466.638, 156.445, -475.63, 158.243, -479.226, 167.235, -472.932, 175.327, -487.318, 205.896, -490.914, 204.098, -480.125, 178.923, -484.621, 167.235, -482.822, 159.143, -490.015, 157.344, -495.41, 178.923, -498.107, 151.051)
+
+[node name="Area2D2" type="Area2D" parent="Room"]
+script = ExtResource("3_xi533")
+next_room = "roomOutside"
+unlocked_message = " "
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Area2D2"]
+polygon = PackedVector2Array(-339, 292, -470, 327, -486, 406, -359, 444, -204, 423, -157, 369, -175, 324)
