@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Megacooliiil"
+config/name="Prison of Zuul"
 run/main_scene="res://main_scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://images/key3-.png"
 
 [display]
 
