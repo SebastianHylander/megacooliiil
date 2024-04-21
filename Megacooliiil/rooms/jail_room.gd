@@ -7,9 +7,13 @@ var sound_played = false
 
 # Called when the room is entered
 func enter(mainnode):
-	
 	if first_enter:
 		first_enter = false
+		
+		#Dig hole in start era
+		var start_hole = preload("res://images/start_hole.png")
+		mainnode.get_room("roomStart").get_node("Room").set_texture(start_hole)
+	
 	elif not sound_played:
 		play_sound = true
 		sound_played = true

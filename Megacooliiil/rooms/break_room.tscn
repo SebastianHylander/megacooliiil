@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://do73ff1n8tt0u"]
 
 [ext_resource type="Script" path="res://rooms/break_room.gd" id="1_o8eyr"]
-[ext_resource type="Texture2D" uid="uid://dgclnqplwobf5" path="res://images/break_room.png" id="2_6aw7p"]
+[ext_resource type="Texture2D" uid="uid://bljwcrallm56x" path="res://images/break_room.png" id="2_6aw7p"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_k6kon"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="4_mt7pi"]
-[ext_resource type="AudioStream" uid="uid://uhum11dwel5n" path="res://sounds/painting.wav" id="5_37ywh"]
+[ext_resource type="AudioStream" uid="uid://b57rary1eqtcr" path="res://sounds/painting.wav" id="5_37ywh"]
 
 [node name="roomBreak" type="Node2D"]
 script = ExtResource("1_o8eyr")
