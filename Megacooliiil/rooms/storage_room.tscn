@@ -396,3 +396,66 @@ message = "Secriets - \"There is no 'I' in Secrets\""
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Book47"]
 polygon = PackedVector2Array(551, -95, 585, -105, 597, -103, 599, -100, 607, -47, 604, -41, 601, -39, 599, -49, 601, -51, 600, -55, 596, -58, 588, -58, 585, -54, 587, -49, 588, -20, 578, -4, 575, 0, 569, 0, 565, -2, 560, -5, 557, -5, 557, -10, 559, -13)
+
+[node name="BottlePink" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "Looks dangerous"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/BottlePink"]
+polygon = PackedVector2Array(133, -66, 132, -34, 149, -33, 144, -66, 138, -81)
+
+[node name="Fabric" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "These fabrics might once have been soft but now they do not seem very comfortable"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Fabric"]
+polygon = PackedVector2Array(-689, 222, -662, 225, -653, 278, -706, 323, -720, 323, -728, 322, -727, 237)
+
+[node name="Boxes" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "Some pretty well stacked boxes"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Boxes"]
+polygon = PackedVector2Array(-727, 193, -715, 205, -646, 172, -646, 157, -634, 163, -575, 132, -545, 116, -555, 26, -609, 34, -614, 50, -646, 40, -710, 62, -707, 89, -728, 91)
+
+[node name="Files" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "Looks like some sort of filling system"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Files"]
+polygon = PackedVector2Array(394, -108, 393, -46, 482, -19, 498, -27, 493, -98, 506, -106, 494, -112, 470, -111, 468, -106, 433, -102, 427, -109)
+
+[node name="Box2" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "A box of grey shiny stuff. Upon closer inspection it seems to be gravel"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Box2"]
+polygon = PackedVector2Array(565, 99, 564, 159, 633, 185, 651, 172, 651, 102, 651, 102, 607, 77, 607, 77)
+
+[node name="Bottles2" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "What am I even doing?"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Bottles2"]
+polygon = PackedVector2Array(587, -57, 582, -6, 640, 6, 635, -29, 631, -52, 622, -54, 614, -93, 603, -91, 609, -50, 604, -40, 599, -39, 597, -56)
+
+[node name="Box1" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "A box of stuff. A person of more patience might look through it to see if there is anything of worth in there"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Box1"]
+polygon = PackedVector2Array(-72, -76, -73, -29, 10, -29, 16, -41, 16, -85, -12, -92, -36, -92, -59, -87)
+
+[node name="Towels1" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "Towels for new you spill the liquid in the bottles"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Towels1"]
+polygon = PackedVector2Array(47, -141, 45, -111, 122, -112, 122, -143)
+
+[node name="Bottles1" type="Area2D" parent="Room"]
+script = ExtResource("6_86ee0")
+message = "Be carefull not to spill those"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Bottles1"]
+polygon = PackedVector2Array(5, -138, 4, -105, 42, -105, 38, -132)
