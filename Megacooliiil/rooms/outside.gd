@@ -71,6 +71,8 @@ func _process(delta):
 	
 func enter(mainnode : Node):
 	main_node = mainnode
+	main_node.get_node("UILayer/BackArrow").visible = false
+	main_node.get_node("UILayer/Inventory").visible = false
 
 func exit(mainnode : Node):
 	pass

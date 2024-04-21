@@ -8,7 +8,10 @@ var first_enter = true
 func enter(mainnode):
 	if first_enter:
 		first_enter = false
+	else:
+		get_node("Room/Hole").visible = true
 	mainnode.get_node("UILayer/BackArrow").visible = false
 
 func exit(mainnode):
 	mainnode.get_node("UILayer/BackArrow").visible = true
+	
