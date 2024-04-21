@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://djedo3nhb5k80"]
+[gd_scene load_steps=10 format=3 uid="uid://djedo3nhb5k80"]
 
 [ext_resource type="Script" path="res://rooms/jail_room.gd" id="1_2nt6m"]
 [ext_resource type="Texture2D" uid="uid://cfrsxdynym13x" path="res://images/jail_room.png" id="2_34e5d"]
+[ext_resource type="AudioStream" uid="uid://bhps5yaxvtqcm" path="res://sounds/spade_drop.wav" id="2_a1ute"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_lpsml"]
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="3_o0urh"]
 [ext_resource type="PackedScene" uid="uid://7lk0cy4hpjk6" path="res://items/key.tscn" id="4_bbsk6"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="6_a4hxg"]
 [ext_resource type="AudioStream" uid="uid://o03skick33tv" path="res://sounds/uhh.wav" id="7_p0fmh"]
+[ext_resource type="Script" path="res://rooms/sound_player.gd" id="8_gjs2e"]
 
 [node name="roomJail" type="Node2D"]
 script = ExtResource("1_2nt6m")
@@ -68,3 +70,12 @@ message = "*Something in the void stares back*"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Cell4"]
 polygon = PackedVector2Array(-861.862, 450, -742.743, 363, -850.851, -12, -990.991, 53)
+
+[node name="sound_player" type="Node2D" parent="Room" node_paths=PackedStringArray("streamer")]
+position = Vector2(-1.00094, -0.99997)
+scale = Vector2(1.001, 1)
+script = ExtResource("8_gjs2e")
+streamer = NodePath("spade_noise")
+
+[node name="spade_noise" type="AudioStreamPlayer2D" parent="Room/sound_player"]
+stream = ExtResource("2_a1ute")
