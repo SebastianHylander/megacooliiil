@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://esi3ftfnue3m"]
+[gd_scene load_steps=4 format=3 uid="uid://esi3ftfnue3m"]
 
 [ext_resource type="Script" path="res://rooms/end_room.gd" id="1_4dutx"]
-[ext_resource type="Texture2D" uid="uid://duy1qvg2b6wu3" path="res://images/end_room.png" id="2_cxf3s"]
+[ext_resource type="Texture2D" uid="uid://m58ygweq5ym0" path="res://images/end_room.png" id="2_cxf3s"]
+[ext_resource type="Script" path="res://rooms/info_object.gd" id="3_alt5b"]
 
 [node name="roomEnd" type="Node2D"]
 script = ExtResource("1_4dutx")
@@ -9,3 +10,45 @@ prev_room = "roomStorage"
 
 [node name="Room" type="Sprite2D" parent="."]
 texture = ExtResource("2_cxf3s")
+
+[node name="Chair" type="Area2D" parent="Room"]
+script = ExtResource("3_alt5b")
+message = "Does not seem like a very nice place to sit"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Chair"]
+polygon = PackedVector2Array(-207, 133, -190, 124, -175, 121, -153, 119, -132, 119, -114, 124, -97, 128, -84, 133, -77, 141, -73, 175, -83, 190, -90, 194, -60, 256, -89, 262, -109, 193, -128, 196, -128, 282, -155, 282, -141, 198, -165, 197, -193, 263, -213, 261, -175, 194, -207, 175)
+
+[node name="Drawer4" type="Area2D" parent="Room"]
+script = ExtResource("3_alt5b")
+message = "huh there is no dust in this one"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Drawer4"]
+polygon = PackedVector2Array(42, 202, 41, 236, 317, 235, 316, 202)
+
+[node name="Drawer3" type="Area2D" parent="Room"]
+script = ExtResource("3_alt5b")
+message = "Huh only dust in here"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Drawer3"]
+polygon = PackedVector2Array(50, 121, 49, 182, 326, 186, 323, 133)
+
+[node name="Drawer2" type="Area2D" parent="Room"]
+script = ExtResource("3_alt5b")
+message = "It's locked"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Drawer2"]
+polygon = PackedVector2Array(206, 47, 206, 102, 330, 106, 333, 49)
+
+[node name="Drawer1" type="Area2D" parent="Room"]
+script = ExtResource("3_alt5b")
+message = "It's empty"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Drawer1"]
+polygon = PackedVector2Array(46, 47, 46, 97, 172, 103, 171, 47)
+
+[node name="Candle" type="Area2D" parent="Room"]
+script = ExtResource("3_alt5b")
+message = "Wait... who lit the candles?"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Candle"]
+polygon = PackedVector2Array(264, -25, 265, -79, 268, -101, 284, -106, 297, -120, 307, -121, 311, -106, 313, -10, 263, -2)

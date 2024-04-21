@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dfmkognun35go"]
 
 [ext_resource type="Script" path="res://rooms/storage_room.gd" id="1_v5hrg"]
-[ext_resource type="Texture2D" uid="uid://b48iekmp8vxjx" path="res://images/storage_room.png" id="2_mrem8"]
+[ext_resource type="Texture2D" uid="uid://krdpsdvchtd7" path="res://images/storage_room.png" id="2_mrem8"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_tkoll"]
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="4_qjkuc"]
-[ext_resource type="PackedScene" path="res://items/key3.tscn" id="5_ovc8y"]
+[ext_resource type="PackedScene" uid="uid://sbtwexwqtb4e" path="res://items/key3.tscn" id="5_ovc8y"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="6_86ee0"]
 
 [node name="roomStorage" type="Node2D" node_paths=PackedStringArray("whisper_streamer")]

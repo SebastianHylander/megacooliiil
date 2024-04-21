@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwrxd44xykycu"]
+[gd_scene load_steps=7 format=3 uid="uid://dwrxd44xykycu"]
 
 [ext_resource type="Script" path="res://rooms/painting_room.gd" id="1_osk2a"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_73bb4"]
-[ext_resource type="Texture2D" uid="uid://dfm8k4f7h5lv7" path="res://images/painting_room.png" id="2_ketms"]
+[ext_resource type="Texture2D" uid="uid://jxe114hilb7b" path="res://images/painting_room.png" id="2_ketms"]
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="4_ujxt2"]
 [ext_resource type="PackedScene" uid="uid://ivmhwno7gn0t" path="res://items/key2.tscn" id="5_5f676"]
+[ext_resource type="Script" path="res://rooms/info_object.gd" id="6_3uhnv"]
 
 [node name="roomPainting" type="Node2D"]
 script = ExtResource("1_osk2a")
@@ -50,3 +51,18 @@ message = "You open the box on the table and find a key inside"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Box"]
 polygon = PackedVector2Array(-576, 152, -561, 160, -538, 145, -541, 132, -545, 123, -552, 123, -557, 126, -573, 139)
+
+[node name="Chair" type="Area2D" parent="Room"]
+script = ExtResource("6_3uhnv")
+message = "You look under the seat... you find nothing"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Chair"]
+polygon = PackedVector2Array(-787, 156, -756, 434, -738, 435, -754, 313, -687, 339, -683, 439, -670, 438, -655, 376, -655, 322, -614, 297, -607, 389, -591, 383, -600, 266, -675, 236, -702, 111)
+
+[node name="FloorPainting" type="Area2D" parent="Room"]
+visible = false
+script = ExtResource("6_3uhnv")
+message = "Did the painting fall down by itself?"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/FloorPainting"]
+polygon = PackedVector2Array(-402, 274, -326, 415, -96, 390, -202, 260)

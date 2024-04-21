@@ -31,6 +31,7 @@ func unlock_painting():
 	#unlock painting
 	var painting_room = mainnode.get_room("roomPainting")
 	painting_room.get_node("Room/Painting").locked = false
+	painting_room.get_node("Room/FloorPainting").visible = true
 	
 	#Change painting to fallen
 	var fallen_painting = preload("res://images/painting_room_with_tunnel.png")

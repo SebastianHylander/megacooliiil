@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://173cm8pck637"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_ckb3h"]
-[ext_resource type="FontFile" uid="uid://dt02pbjrrwoob" path="res://Gabrielle.ttf" id="1_qebin"]
+[ext_resource type="FontFile" uid="uid://y0cadiju4cdy" path="res://Gabrielle.ttf" id="1_qebin"]
 [ext_resource type="Script" path="res://Textfield.gd" id="2_1p3x7"]
 [ext_resource type="Script" path="res://Items.gd" id="4_td557"]
 [ext_resource type="Script" path="res://Item.gd" id="5_gpcit"]
-[ext_resource type="Texture2D" uid="uid://o4yjgddr7jut" path="res://images/backArrow.png" id="6_o86a4"]
+[ext_resource type="Texture2D" uid="uid://j2ksqg612nct" path="res://images/backArrow.png" id="6_o86a4"]
 [ext_resource type="Script" path="res://BackArrow.gd" id="6_qw6mn"]
-[ext_resource type="AudioStream" uid="uid://csbmv0c5ky8by" path="res://sounds/background.wav" id="8_epct2"]
+[ext_resource type="AudioStream" uid="uid://bsx4roui2scom" path="res://sounds/background.wav" id="8_epct2"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_ckb3h")
