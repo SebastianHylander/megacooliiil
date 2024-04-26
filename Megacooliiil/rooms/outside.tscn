@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpeper6un6kmr"]
 
 [ext_resource type="Script" path="res://rooms/outside.gd" id="1_2nlgb"]
-[ext_resource type="Texture2D" uid="uid://d07xpfutxa4id" path="res://images/outside.png" id="1_ds3u4"]
-[ext_resource type="AudioStream" uid="uid://bighcmnae15iu" path="res://sounds/door_creak.wav" id="3_68qmm"]
-[ext_resource type="AudioStream" uid="uid://boaisjgyxgal3" path="res://sounds/birds.wav" id="4_46ys0"]
+[ext_resource type="Texture2D" uid="uid://dpbcqlfdi2x84" path="res://images/outside.png" id="1_ds3u4"]
+[ext_resource type="AudioStream" uid="uid://s2t0yyujuao3" path="res://sounds/door_creak.wav" id="3_68qmm"]
+[ext_resource type="AudioStream" uid="uid://m7uw8phrg1yk" path="res://sounds/birds.wav" id="4_46ys0"]
 
 [node name="End_Scene" type="Node2D"]
 script = ExtResource("1_2nlgb")

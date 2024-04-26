@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://do73ff1n8tt0u"]
 
 [ext_resource type="Script" path="res://rooms/break_room.gd" id="1_o8eyr"]
-[ext_resource type="Texture2D" uid="uid://bljwcrallm56x" path="res://images/break_room.png" id="2_6aw7p"]
+[ext_resource type="Texture2D" uid="uid://dgclnqplwobf5" path="res://images/break_room.png" id="2_6aw7p"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_k6kon"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="4_mt7pi"]
-[ext_resource type="AudioStream" uid="uid://b57rary1eqtcr" path="res://sounds/painting.wav" id="5_37ywh"]
+[ext_resource type="AudioStream" uid="uid://uhum11dwel5n" path="res://sounds/painting.wav" id="5_37ywh"]
 
 [node name="roomBreak" type="Node2D"]
 script = ExtResource("1_o8eyr")
@@ -42,7 +42,7 @@ polygon = PackedVector2Array(-81, 86, -53, 96, -60, 122, -71, 119, -66, 134, -90
 
 [node name="Coins" type="Area2D" parent="Room"]
 script = ExtResource("4_mt7pi")
-message = "Don't you dare think about it, you are a honest person"
+message = "Don't you dare think about it, you are an honest person"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Coins"]
 polygon = PackedVector2Array(318, 56, 350, 63, 354, 124, 359, 147, 333, 151, 334, 138, 318, 131, 308, 137, 291, 127, 302, 117)

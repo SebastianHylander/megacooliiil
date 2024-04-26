@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://rooms/painting_room.gd" id="1_osk2a"]
 [ext_resource type="Script" path="res://rooms/door.gd" id="2_73bb4"]
-[ext_resource type="Texture2D" uid="uid://jxe114hilb7b" path="res://images/painting_room.png" id="2_ketms"]
+[ext_resource type="Texture2D" uid="uid://dfm8k4f7h5lv7" path="res://images/painting_room.png" id="2_ketms"]
 [ext_resource type="Script" path="res://rooms/CollectItem.gd" id="4_ujxt2"]
 [ext_resource type="PackedScene" uid="uid://ivmhwno7gn0t" path="res://items/key2.tscn" id="5_5f676"]
 [ext_resource type="Script" path="res://rooms/info_object.gd" id="6_3uhnv"]
@@ -18,7 +18,7 @@ texture = ExtResource("2_ketms")
 script = ExtResource("2_73bb4")
 next_room = "roomStorage"
 unlocked_message = "Was that hole always there? You climb through the hole in the wall and get into the next room"
-locked_message = "It is a painting of a man. He looks unhappy. You wonder if he is the owner of this place and why one would be unhappy if the owned a castle"
+locked_message = "It is a painting of a man. He looks unhappy. You wonder if he is the owner of this place and why one would be unhappy if they owned a castle"
 locked = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room/Painting"]

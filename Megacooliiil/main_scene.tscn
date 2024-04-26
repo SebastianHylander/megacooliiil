@@ -216,3 +216,5 @@ polygon = PackedVector2Array(19, 3, 50, 2, 51, 19, 67, 20, 35, 37, 4, 20, 18, 19
 stream = ExtResource("8_epct2")
 volume_db = -10.306
 autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="AudioStreamPlayer2D" method="play"]
